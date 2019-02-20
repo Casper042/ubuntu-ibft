@@ -1,0 +1,7 @@
+uname -rv
+
+http://us.archive.ubuntu.com/ubuntu/pool/main/l/linux/linux-modules-4.15.0-45-generic_4.15.0-45.48_amd64.deb -O /tmp/linux-modules.deb 
+udpkg -i /tmp/linux-modules.deb
+
+wget http://ppa.launchpad.net/mfo/sf211547/ubuntu/pool/main/h/hw-detect/disk-detect_1.117ubuntu6+test20190131b1_amd64.udeb -O /tmp/disk-detect-ibft.udeb
+udpkg --unpack /tmp/disk-detect-ibft.udeb

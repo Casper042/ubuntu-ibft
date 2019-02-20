@@ -1,0 +1,14 @@
+Boot the Bionic/18.04 installer with additional kernel options 'disk-detect/ibft/enable=true --- iscsi_auto'
+
+These options can be merged to existing options, just make sure the triple-dash comes after any installer-only 
+options (e.g., preseeding) and that 'iscsi_auto' comes after the triple-dash (with other options for the 
+installed system too, if any), so that it's used by the installed system (it does not affect the installer)
+
+
+Default for 18.04.2 (Non Live):
+linux	/install/vmlinuz file=/cdrom/preseed/ubuntu-server.seed quiet ---
+
+Modified:
+linux	/install/vmlinuz file=/cdrom/preseed/ubuntu-server.seed quiet disk-detect/ibft/enable=true --- iscsi_auto
+
+
